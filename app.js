@@ -41,10 +41,8 @@ app.post("/", (req, res) => {
             }
         })
 
-        setTimeout(function() {
-            resID = response.id;
-        }, 1500);
-        
+    
+        resID = response.id;
         console.log(
             `Successfully added contact as an audience member. The contact's id is ${response.id
             }.`
@@ -58,7 +56,7 @@ app.post("/", (req, res) => {
         }else{
             res.sendFile(__dirname + "/success.html")
         }
-    }, 3000);
+    }, 5000);
     
 
 })
