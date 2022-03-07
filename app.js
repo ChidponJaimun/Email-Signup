@@ -49,7 +49,7 @@ app.post("/", (req, res) => {
            
         );
     }
-    run().catch(e => res.sendFile(__dirname + "/failure.html"));
+    run().catch(e => res.send(e));
     setTimeout(function() {
         if (resID===null){
             res.sendFile(__dirname + "/failure.html")
