@@ -1,10 +1,11 @@
 
 const express = require("express");
 const mailchimp = require("@mailchimp/mailchimp_marketing");
+require('dotenv').config();
 
 const port = 3000;
 const app = express();
-const api = "6f884540fe5859c3401f35635e6d073c-us5";
+const api = process.env.SECRET_KEY;
 
 
 mailchimp.setConfig({
